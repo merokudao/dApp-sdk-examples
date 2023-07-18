@@ -1,0 +1,17 @@
+{
+    "name": "merokusdktest",
+    "version": "1.0.0",
+    "description": "Testing SDK package",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@dapp-sdk/analytics": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics",
+        "dotenv": "^16.3.1"
+    },
+    "tsconfig": "*",
+    "eslint-config-custom": "*"
+}
