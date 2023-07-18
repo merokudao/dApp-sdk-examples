@@ -409,31 +409,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dapp-sdk/analytics-dapplooker@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker::locator=%40dapp-sdk%2Fanalytics%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%3A%3Ahash%3D11e0b1%26locator%3Dmerokusdktest%2540workspace%253A.":
-  version: 1.0.0
-  resolution: "@dapp-sdk/analytics-dapplooker@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker::hash=baeac5&locator=%40dapp-sdk%2Fanalytics%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%3A%3Ahash%3D11e0b1%26locator%3Dmerokusdktest%2540workspace%253A."
+"@dapp-sdk/analytics-dapplooker@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker::locator=%40dapp-sdk%2Fanalytics%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%3A%3Ahash%3D73de0f%26locator%3Dmerokusdktest%2540workspace%253A.":
+  version: 1.0.1
+  resolution: "@dapp-sdk/analytics-dapplooker@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker::hash=cbbe3d&locator=%40dapp-sdk%2Fanalytics%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics%3A%3Ahash%3D73de0f%26locator%3Dmerokusdktest%2540workspace%253A."
   dependencies:
     "@dapp-sdk/analytics-interface": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface"
     "@types/jest": ^29.5.3
     dapplooker-sdk: 0.0.6
     jest: ^29.6.1
-  checksum: 48648940b8c2bba37dfc00d6933a7ad32909e26b6d4be505713850fd5f4b2a298b8870cc84a332a465fe59510ceab2fd358561e70ebc878884264b114aa83fe8
+  checksum: 5fdfd1ab89588a778b569099c83a98a9d369a128a8f41643fb08b453b08f53a90fc0795fe1f8418866a83e3deefcf1c637322939e50e54fd9b44dfc0f5377b03
   languageName: node
   linkType: hard
 
-"@dapp-sdk/analytics-interface@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface::locator=%40dapp-sdk%2Fanalytics-dapplooker%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%3A%3Ahash%3Dbaeac5%26locator%3D%2540dapp-sdk%252Fanalytics%2540file%253A%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%2523%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%253A%253Ahash%253D11e0b1%2526locator%253Dmerokusdktest%252540workspace%25253A.":
-  version: 1.0.0
-  resolution: "@dapp-sdk/analytics-interface@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface::hash=4b3f39&locator=%40dapp-sdk%2Fanalytics-dapplooker%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%3A%3Ahash%3Dbaeac5%26locator%3D%2540dapp-sdk%252Fanalytics%2540file%253A%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%2523%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%253A%253Ahash%253D11e0b1%2526locator%253Dmerokusdktest%252540workspace%25253A."
-  checksum: e6382a30b8961d736b310df9a8dddf1cc24c4dfcd7011836c8eda15523a4a586cf746d32a5a86e57d240e582f5786934c047a34408101a666b84ff7fc9da9e8f
+"@dapp-sdk/analytics-interface@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface::locator=%40dapp-sdk%2Fanalytics-dapplooker%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%3A%3Ahash%3Dcbbe3d%26locator%3D%2540dapp-sdk%252Fanalytics%2540file%253A%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%2523%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%253A%253Ahash%253D73de0f%2526locator%253Dmerokusdktest%252540workspace%25253A.":
+  version: 1.0.1
+  resolution: "@dapp-sdk/analytics-interface@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-interface::hash=b2853e&locator=%40dapp-sdk%2Fanalytics-dapplooker%40file%3A%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%23%2FUsers%2Fchoubey%2FDocuments%2FCodeBase%2FdApp-sdk%2Fpackages%2Fanalytics-dapplooker%3A%3Ahash%3Dcbbe3d%26locator%3D%2540dapp-sdk%252Fanalytics%2540file%253A%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%2523%252FUsers%252Fchoubey%252FDocuments%252FCodeBase%252FdApp-sdk%252Fpackages%252Fanalytics%253A%253Ahash%253D73de0f%2526locator%253Dmerokusdktest%252540workspace%25253A."
+  checksum: 9b4228c06f275f4bf34edbce341dfcdf12537d1505d51e376d9d6c17f4d00975e7c5f93597aedced8972d1489704ad649e3323c77b6fb5488f5c689b82e3b58c
   languageName: node
   linkType: hard
 
 "@dapp-sdk/analytics@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics::locator=merokusdktest%40workspace%3A.":
-  version: 1.0.1
-  resolution: "@dapp-sdk/analytics@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics::hash=11e0b1&locator=merokusdktest%40workspace%3A."
+  version: 1.0.2
+  resolution: "@dapp-sdk/analytics@file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics#/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics::hash=73de0f&locator=merokusdktest%40workspace%3A."
   dependencies:
     "@dapp-sdk/analytics-dapplooker": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics-dapplooker"
-  checksum: d450b4ccc758eff755b9e721bcedc7e5f52eeaaf833fad3cae05b48c1e40e240d0fb2f411e72ed1f9c25dcd119e0141185cecea4544b794110332560e23adee4
+  checksum: 86001c959785fc106e5e2fa51c4f594317a1e0fea73e4f9d2185b33d2fc02d0ff1f891e6125eacd28eac0531b321cae452a5dcdad152611554535029c4568f60
   languageName: node
   linkType: hard
 
@@ -1501,6 +1501,13 @@ __metadata:
   version: 29.4.3
   resolution: "diff-sequences@npm:29.4.3"
   checksum: 28b265e04fdddcf7f9f814effe102cc95a9dec0564a579b5aed140edb24fc345c611ca52d76d725a3cab55d3888b915b5e8a4702e0f6058968a90fa5f41fcde7
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 15d75e7279018f4bafd0ee9706593dd14455ddb71b3bcba9c52574460b7ccaf67d5cf8b2c08a5af1a9da6db36c956a04a1192b101ee102a3e0cf8817bbcf3dfd
   languageName: node
   linkType: hard
 
@@ -2692,6 +2699,7 @@ __metadata:
   resolution: "merokusdktest@workspace:."
   dependencies:
     "@dapp-sdk/analytics": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics"
+    dotenv: ^16.3.1
   languageName: unknown
   linkType: soft
 

@@ -9,7 +9,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@dapp-sdk/analytics": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics"
+        "@dapp-sdk/analytics": "file:/Users/choubey/Documents/CodeBase/dApp-sdk/packages/analytics",
+        "dotenv": "^16.3.1"
     },
     "tsconfig": "*",
     "eslint-config-custom": "*"

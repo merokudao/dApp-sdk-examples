@@ -1,8 +1,12 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const DLAnalytics = require("@dapp-sdk/analytics")
+
 
 const getChartData = async () => {
 	let chartUUID = "dc9b69d8-7ca1-45d4-8ad0-a17f915f3f0";
-	let apiKey = "qzusb5p3q246ip246ab6g0p8ppzb7u";
+	let apiKey = process.env.DL_API_KEY;
 	let outputFormat = 'json'
 	let baseConfig = {
 		apiKey: apiKey,
