@@ -1,6 +1,17 @@
+## Push API Functions
+
+This document provides an overview of various functions that interact with the `PushAPIModule` from the "@dapp-sdk/messaging-push" package. These functions use the Push API to perform actions such as creating users, fetching chats, sending messages, approving chat requests, and more.
+
+### Setting Up
+
+Before using the functions, ensure you have the required dependencies installed and set up as follows:
+
+```typescript
 import PushAPIModule from "@dapp-sdk/messaging-push";
 import { ENV } from "@pushprotocol/restapi/src/lib/constants";
 import ethers from "ethers";
+
+// Let's create 2 dummy wallets to use for testing out functions
 
 const PRIVATE_KEY_1 = ethers.Wallet.createRandom().privateKey;
 const PRIVATE_KEY_2 = ethers.Wallet.createRandom().privateKey;
@@ -10,7 +21,11 @@ const PUBLIC_ADDRESS_1 = SIGNER_1.address;
 const PUBLIC_ADDRESS_2 = SIGNER_2.address;
 
 const pushAPI = new PushAPIModule({ env: ENV.STAGING });
+```
 
+### Create a user
+
+```typescript
 async function createUser(signer: ethers.Signer) {
   const user = await pushAPI.createUser({
     signer: signer,
@@ -19,7 +34,13 @@ async function createUser(signer: ethers.Signer) {
   console.log("Push API response for createUser(): ", user);
   return user;
 }
+```
 
+Example: `createUser(SIGNER_1)`
+
+### Get a user
+
+```typescript
 async function getUser(publicAddress: string) {
   const user = await pushAPI.getUser({
     account: publicAddress,
@@ -28,14 +49,19 @@ async function getUser(publicAddress: string) {
   console.log("Push API response for getUser(): ", user);
   return user;
 }
+```
 
-// Get Chats of PUBLIC_ADDRESS_1
+Example: `getUser(PUBLIC_ADDRESS_1)`
+
+### Get a user's chat
+
+```typescript
 async function getChats(publicAddress: string, signer: ethers.Signer) {
   // Fetch user
   const user = await getUser(publicAddress);
 
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.decryptPGPKey({
+  const pgpDecryptedPvtKey = await pushAPI.decryptPGPKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -43,18 +69,24 @@ async function getChats(publicAddress: string, signer: ethers.Signer) {
   const response = await pushAPI.fetchChats({
     account: publicAddress,
     toDecrypt: true,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
   console.log("Push API response for getChats(): ", response);
   return response;
 }
-// Get Chat requests for PUBLIC_ADDRESS_1
+```
+
+Example: `getChats(PUBLIC_ADDRESS_1, SIGNER_1)`
+
+### Get a user's chat Requests
+
+```typescript
 async function getChatRequests(publicAddress: string, signer: ethers.Signer) {
   // Fetch user
   const user = await getUser(publicAddress);
 
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.getPgpPrivateKey({
+  const pgpDecryptedPvtKey = await pushAPI.getPgpPrivateKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -62,14 +94,19 @@ async function getChatRequests(publicAddress: string, signer: ethers.Signer) {
   const response = await pushAPI.fetchChatRequest({
     account: publicAddress,
     toDecrypt: true,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
 
   console.log("Push API response for getChatRequests(): ", response);
   return response;
 }
+```
 
-// getConversationHash between PUBLIC_ADDRESS_1 and PUBLIC_ADDRESS_2
+Example: `getChatRequests(PUBLIC_ADDRESS_1, SIGNER_1)`
+
+### Get conversation hash between 2 addressses
+
+```typescript
 async function getConversationHash(
   publicAddress: string,
   publicAddress2: string
@@ -85,8 +122,13 @@ async function getConversationHash(
   );
   return conversationHash;
 }
+```
 
-// getLatestChat between PUBLIC_ADDRESS_1 and PUBLIC_ADDRESS_2
+Example: `getConversationHash(PUBLIC_ADDRESS_1, PUBLIC_ADDRESS_2)`
+
+### Get latest chat
+
+```typescript
 async function getLatestChat(
   publicAddress: string,
   signer: ethers.Signer,
@@ -95,7 +137,7 @@ async function getLatestChat(
   // Fetch user
   const user = await getUser(publicAddress);
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.getPgpPrivateKey({
+  const pgpDecryptedPvtKey = await pushAPI.getPgpPrivateKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -110,13 +152,18 @@ async function getLatestChat(
     threadhash: conversationHash.threadHash,
     account: publicAddress,
     toDecrypt: true,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
 
   console.log("Push API response for getLatestChat(): ", response);
 }
+```
 
-// Chat history between PUBLIC_ADDRESS_1 and PUBLIC_ADDRESS_2
+Example: `getLatestChat(PUBLIC_ADDRESS_1, SIGNER_1,PUBLIC_ADDRESS_2)`
+
+### Get chat history between two users
+
+```typescript
 async function getChatHistory(
   publicAddress: string,
   signer: ethers.Signer,
@@ -126,7 +173,7 @@ async function getChatHistory(
   const user = await getUser(publicAddress);
 
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.getPgpPrivateKey({
+  const pgpDecryptedPvtKey = await pushAPI.getPgpPrivateKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -142,24 +189,29 @@ async function getChatHistory(
     account: publicAddress,
     limit: 5,
     toDecrypt: true,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
 
   console.log("Push API response for getChatHistory(): ", response);
   return response;
 }
+```
 
-// Send message
+Example: `getChatHistory(PUBLIC_ADDRESS_1, SIGNER_1,PUBLIC_ADDRESS_2)`
+
+### Send a message
+
+```typescript
 async function sendMessage(
   publicAddress: string,
-  signer: ethers.Signe,
+  signer: ethers.Signer,
   publicAddress2: string
 ) {
   // Fetch user
   const user = await getUser(publicAddress);
 
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.getPgpPrivateKey({
+  const pgpDecryptedPvtKey = await pushAPI.getPgpPrivateKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -169,14 +221,19 @@ async function sendMessage(
     messageType: "Text", // can be "Text" | "Image" | "File" | "GIF"
     receiverAddress: publicAddress2,
     signer: signer,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
 
   console.log("Push API response for sendMessage(): ", response);
   return response;
 }
+```
 
-// Approve the chat request
+Example: `sendMessage(PUBLIC_ADDRESS_1, SIGNER_1,PUBLIC_ADDRESS_2)`
+
+### Approve a chat request
+
+```typescript
 async function approveChat(
   publicAddress: string,
   signer: ethers.Signer,
@@ -186,7 +243,7 @@ async function approveChat(
   const user = await getUser(publicAddress);
 
   // Decrypt PGP Key
-  const pgpDecrpyptedPvtKey = await pushAPI.getPgpPrivateKey({
+  const pgpDecryptedPvtKey = await pushAPI.getPgpPrivateKey({
     encryptedPGPPrivateKey: user.encryptedPrivateKey,
     signer: signer,
   });
@@ -195,8 +252,11 @@ async function approveChat(
     status: "Approved",
     senderAddress: publicAddress2,
     signer: signer,
-    pgpPrivateKey: pgpDecrpyptedPvtKey,
+    pgpPrivateKey: pgpDecryptedPvtKey,
   });
 
   console.log("Push API response for approveChat(): ", approve);
 }
+```
+
+Example: `approveChat(PUBLIC_ADDRESS_1, SIGNER_1,PUBLIC_ADDRESS_2)`
