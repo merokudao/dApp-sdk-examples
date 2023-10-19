@@ -1,4 +1,4 @@
-import { IPeer } from '@dapp-sdk/audiospaces-huddle01';
+import { IPeer } from '@dapp-sdk/audiospace-huddle01';
 import { StoreSlice } from '../types';
 import { IRoleEnum } from '@/utils/types';
 

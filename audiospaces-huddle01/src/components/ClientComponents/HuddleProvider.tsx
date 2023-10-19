@@ -1,6 +1,6 @@
 'use client';
 
-import { AudioSpacesClient } from '@dapp-sdk/audiospaces-huddle01';
+import { AudioSpacesClient } from '@dapp-sdk/audiospace-huddle01';
 import dynamic from 'next/dynamic';
 import React, { createContext } from 'react';
 

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+'use client';
+import { useEffect } from 'react';
 import useSpaces from '../hooks/useSpaces';
 import useStore from '@/store/slices';
 import { useRouter } from 'next/navigation';
@@ -21,6 +22,7 @@ const RoomStateHandler = () => {
       console.log('lobby:joined');
       setIsLobbyJoined(true);
       setIsRoomJoined(false);
+      setMeValue('peerId', client.getMeId());
     });
 
     client.on('room:joined', (peerMap) => {
@@ -29,7 +31,7 @@ const RoomStateHandler = () => {
       setIsRoomJoined(true);
       setPeerMap(peerMap);
       setMeValue('joinStatus', 'joined');
-      setMeValue('role', client.getPeer(me.peerId).role);
+      setMeValue('role', peerMap.size < 1 ? 'host' : 'listener');
     });
 
     client.on('room:peer-joined', (peer) => {

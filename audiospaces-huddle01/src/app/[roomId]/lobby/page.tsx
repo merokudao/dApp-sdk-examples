@@ -37,7 +37,6 @@ const Lobby = ({ params }: { params: { roomId: string } }) => {
   useEffect(() => {
     if (!isLobbyJoined) {
       joinLobby(params.roomId);
-      setMeValue('peerId', client.getMeId());
       return;
     }
   }, []);

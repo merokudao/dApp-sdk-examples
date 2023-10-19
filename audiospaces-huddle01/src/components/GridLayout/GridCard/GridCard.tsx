@@ -69,7 +69,7 @@ const GridCard: React.FC<GridCardProps> = ({
 
   return (
     <div className="relative flex items-center justify-center flex-col">
-      {mic && <Audio track={mic} />}
+      {<Audio track={mic} />}
       <Image
         src={avatarUrl}
         alt="default-avatar"

@@ -1,4 +1,3 @@
-import { AudioSpacesClient } from '@dapp-sdk/audiospaces-huddle01';
 import { useContext } from 'react';
 import { AudiospaceContext } from '../ClientComponents/HuddleProvider';
 
@@ -9,7 +8,7 @@ const useSpaces = () => {
   }
 
   return {
-    client: spacesClient as AudioSpacesClient,
+    client: spacesClient,
     joinLobby: spacesClient.joinLobby,
     leaveLobby: spacesClient.leaveLobby,
     joinSpace: spacesClient.joinSpace,
