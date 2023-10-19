@@ -1,21 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { useEventListener, useHuddle01 } from '@huddle01/react';
 import { Audio, Video } from '@huddle01/react/components';
-/* Uncomment to see the Xstate Inspector */
-// import { Inspect } from '@huddle01/react/components';
-
-import {
-  useAudio,
-  useLobby,
-  useMeetingMachine,
-  usePeers,
-  useRoom,
-  useVideo,
-  useRecording,
-} from '@huddle01/react/hooks';
-
-import { useDisplayName } from '@huddle01/react/app-utils';
 
 import Button from '../components/Button';
 import useMeet from '../components/hooks/useMeet';
